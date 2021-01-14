@@ -21,7 +21,7 @@ def bfs(v):
                 q.append([e + 1, count])
             if (e - 1) >= 0:
                 q.append([e - 1, count])
-            print(q)
+
     return count
 
 
