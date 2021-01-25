@@ -1,6 +1,7 @@
 def make_subseq(sub, subset, level_max, level_now):
+    #지금 만들어진 부분수열, 만든 부분수열의 집합, ...
     subset.append(sub[:])
-    
+    print(sub)
     for i in range(level_now, level_max):
         sub.append(i)
         make_subseq(sub,subset,level_max,i+1)
