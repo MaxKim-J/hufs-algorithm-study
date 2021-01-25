@@ -11,7 +11,7 @@ def binary(l, N, start, end):
     mid = (start+end)//2
     if l == N[mid]: # 발견!
         i, j = 1, 1
-        while mid-i >= start: #이거 놓침
+        while mid-i >= start:
             if N[mid-i] != N[mid]:
                 break
             else: i += 1
@@ -32,5 +32,5 @@ for n in N:
     end = len(N) - 1
     if n not in n_dic:
         n_dic[n] = binary(n, N, start, end)
-
+print(n_dic)
 print(' '.join(str(n_dic[x]) if x in n_dic else '0' for x in M ))

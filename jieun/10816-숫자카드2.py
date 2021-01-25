@@ -1,5 +1,5 @@
 #count()로 하면 시간초과
-#
+
 from sys import stdin
 num1 = int(stdin.readline())
 N = sorted(map(int,stdin.readline().split()))
@@ -12,17 +12,19 @@ def binary(target):
     while (left <= right):
         mid = (left+right) // 2
         if N[mid] == target:
-            temp = mid
-            temp2 = mid
-            count = 1
+            temp = 1
+            temp2 = 1
             while mid-i >= left:
-                if (N[temp+1] == target):
+                if (N[mid - temp] != target):
+                    break
+                else:
                     temp += 1
-                    count += 1
-                if (N[temp-1] == target):
-                    temp -= 1
-                    count += 1
-            return count
+            while mid+temp2 <= right:
+                 if (N[mid + temp2] != target):
+                     break
+                 else:
+                     temp2 += 1
+            return temp + temp2 - 1
         elif N[mid] > target:
             right = mid - 1
         else:
