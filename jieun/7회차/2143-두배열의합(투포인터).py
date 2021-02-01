@@ -1,11 +1,13 @@
 import sys
 target = int(input(""))
 num1 = int(input(""))
-A = list(map(int, sys.stdin.readline().split()))
+A = list(map(int, input().split()))
 num2 = int(input(""))
-B= list(map(int, sys.stdin.readline().split()))
+B= list(map(int, input().split()))
 C = []
 D = []
+print(A)
+print(B)
 for i in range(num1):
     total = A[i]
     C.append(total)
@@ -21,7 +23,8 @@ for i in range(num2):
         D.append(total)
 C= sorted(C)
 D = sorted(D)
-
+#print(C)
+#print(D)
 #투포인터, A는 처음부터, B는 끝부터
 
 c1= 0
