@@ -11,8 +11,10 @@ graph=[Node() for _ in range(n)]
 
 for _ in range(n-1):
     node1,node2=map(int, input().split(" "))
-    graph[node1-1].link.append(node2-1)
+    graph[node1-1].link.append(node2-1)     ## @ 1번 노드의 인덱스는 0이 되도록 조정 - 인덱스 조정은 입력, 출력 부분에서만
     graph[node2-1].link.append(node1-1)
+    
+    
     
 q=deque()
 
@@ -30,9 +32,15 @@ while len(q):
         q.append(i)
         graph[i].parent=idx_now
         
+#DEBUG
+debug_count=1
+for i in graph:
+    print("num: %d, parent: %d, link: "%(debug_count, i.parent+1) + str(i.link))
+    debug_count+=1
+        
 flag_first_skipped=False
 for i in graph:
     if flag_first_skipped:
-        print(str(i.parent+1))
+        print(str(i.parent+1))      ## @ 조정한 인덱스 복귀
     else:
         flag_first_skipped=True
