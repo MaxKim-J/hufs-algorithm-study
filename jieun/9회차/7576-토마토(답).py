@@ -41,6 +41,6 @@ if isTrue == True:
 #가장 큰 값이 -1이면 count = 0
 elif result == -1:
     print(0)
-#처음에 익은거가 1이므로 첫번째 시도에서 +1해서 계산하면 count = 2가 됨 (result-1해줘야함)
+#처음에 익은거가 1이므로 첫번째 시도에서 +1해서 계산하면 count = 2가 됨 (result-1 해줘야함)
 else:
     print(result - 1)

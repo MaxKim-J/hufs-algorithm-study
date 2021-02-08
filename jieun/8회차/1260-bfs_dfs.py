@@ -1,6 +1,5 @@
 #런타임에러// 반례: 그래프에 노드가 없을 수 있음
 # 1 0 1
-
 from collections import deque
 
 def bfs(graph, root):

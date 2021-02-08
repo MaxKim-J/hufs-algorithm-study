@@ -35,7 +35,7 @@ while (True):
     
     for i in range(h):
         for j in range(w):
-            if visited[i][j] == 0:
+            if visited[i][j] == 0 and maparr[i][j] == 1:
                 isisland = BFS(i, j)
                 if isisland == True:
                     nofisland +=1
