@@ -1,6 +1,6 @@
 def dp(save, n):
 	if save[n]!=0:
-		pass
+		return save[n]
 	
 	if n==1:
 		save[n]=1
@@ -16,5 +16,6 @@ if __name__=="__main__":
     save=[0 for _ in range(n+1)]
     
     print(dp(save, n))
+    
     
     
