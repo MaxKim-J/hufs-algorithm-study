@@ -11,7 +11,7 @@ def dp(save, n, dec):
             sum%=10007;
         save[n][dec]=sum;
     
-    return save[n][dec];
+    return save[n][dec]; 
 
 if __name__=="__main__":
     n=int(input())
