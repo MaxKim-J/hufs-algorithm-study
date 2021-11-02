@@ -1,5 +1,5 @@
+#2021 KAKAO BLIND RECRUITMENT : 합승 택시 요금
 from math import inf
-
 
 def solution(n, s, a, b, fares):
     answer = inf
